@@ -1,0 +1,73 @@
+package com.codeartist.component.mq.core;
+
+import com.codeartist.component.core.support.mq.bean.MqHeaders;
+import com.codeartist.component.core.support.mq.bean.MqMessage;
+import com.codeartist.component.core.support.mq.bean.MqType;
+import com.codeartist.component.core.util.Assert;
+import com.codeartist.component.core.util.JSON;
+import com.codeartist.component.mq.metric.MqMetrics;
+import com.codeartist.component.mq.trace.MqTracers;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * MQ生产者抽象
+ *
+ * @author 艾江南
+ * @date 2021/5/19
+ */
+@Slf4j
+@RequiredArgsConstructor
+public abstract class AbstractMqProducer implements MqProducer {
+
+    private final MqType type;
+
+    @Autowired
+    private MqMetrics mqMetrics;
+    @Autowired
+    private MqTracers mqTracers;
+
+    protected abstract void doSend(MqMessage message);
+
+    @Override
+    public void send(MqMessage message) {
+        String topic = message.getTopic();
+        Assert.notBlank(topic, this.type + " MQ topic is blank");
+        message.setType(this.type);
+
+        if (message.getHeaders() == null) {
+            message.setHeaders(new MqHeaders());
+        }
+
+        mqTracers.producer(message, () -> {
+            doSend(message);
+            mqMetrics.producer(message);
+        });
+    }
+
+    @Override
+    public void init() {
+        log.info("{} MQ producer init.", type);
+        start();
+    }
+
+    @Override
+    public MqType getType() {
+        return this.type;
+    }
+
+    @Override
+    public void start() {
+        log.info("{} MQ producer started.", type);
+    }
+
+    @Override
+    public void stop() {
+        log.info("{} MQ producer stopped.", type);
+    }
+
+    protected <T> String serialize(T data) {
+        return JSON.toJSONString(data);
+    }
+}
