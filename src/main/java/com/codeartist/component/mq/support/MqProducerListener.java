@@ -1,6 +1,6 @@
 package com.codeartist.component.mq.support;
 
-import com.codeartist.component.core.support.mq.bean.MqMessage;
+import com.codeartist.component.core.support.mq.MqMessage;
 import com.codeartist.component.mq.core.MqProducer;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * MQ生产者监听器
  *
- * @author J.N.AI
+ * @author AiJiangnan
  * @date 2023/5/16
  */
 public class MqProducerListener implements ApplicationListener<PayloadApplicationEvent<MqMessage>> {

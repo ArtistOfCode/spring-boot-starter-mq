@@ -1,7 +1,7 @@
 package com.codeartist.component.mq.trace;
 
-import com.codeartist.component.core.support.mq.bean.MqContext;
-import com.codeartist.component.core.support.mq.bean.MqMessage;
+import com.codeartist.component.core.support.mq.MqContext;
+import com.codeartist.component.core.support.mq.MqMessage;
 import com.codeartist.component.core.support.trace.Tracers;
 
 import java.util.Collections;
@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * MQ链路
  *
- * @author J.N.AI
+ * @author AiJiangnan
  * @date 2023/8/1
  */
 public class MqTracers {

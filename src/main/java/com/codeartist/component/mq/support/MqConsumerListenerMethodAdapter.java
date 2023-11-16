@@ -1,6 +1,6 @@
 package com.codeartist.component.mq.support;
 
-import com.codeartist.component.core.support.mq.bean.MqContext;
+import com.codeartist.component.core.support.mq.MqContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.PayloadApplicationEvent;
 import org.springframework.context.event.ApplicationListenerMethodAdapter;
@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 /**
  * MQ消费者事件监听器适配器
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/7/21
  */
 public class MqConsumerListenerMethodAdapter extends ApplicationListenerMethodAdapter {

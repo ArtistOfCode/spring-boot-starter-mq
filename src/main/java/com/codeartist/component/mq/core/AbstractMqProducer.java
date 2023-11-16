@@ -1,8 +1,8 @@
 package com.codeartist.component.mq.core;
 
-import com.codeartist.component.core.support.mq.bean.MqHeaders;
-import com.codeartist.component.core.support.mq.bean.MqMessage;
-import com.codeartist.component.core.support.mq.bean.MqType;
+import com.codeartist.component.core.support.mq.MqHeaders;
+import com.codeartist.component.core.support.mq.MqMessage;
+import com.codeartist.component.core.support.mq.MqType;
 import com.codeartist.component.core.util.Assert;
 import com.codeartist.component.core.util.JSON;
 import com.codeartist.component.mq.metric.MqMetrics;
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * MQ生产者抽象
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/5/19
  */
 @Slf4j

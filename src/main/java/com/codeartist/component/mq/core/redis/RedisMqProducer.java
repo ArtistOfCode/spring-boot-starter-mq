@@ -1,8 +1,8 @@
 package com.codeartist.component.mq.core.redis;
 
-import com.codeartist.component.core.support.mq.bean.MqHeaders;
-import com.codeartist.component.core.support.mq.bean.MqMessage;
-import com.codeartist.component.core.support.mq.bean.MqType;
+import com.codeartist.component.core.support.mq.MqHeaders;
+import com.codeartist.component.core.support.mq.MqMessage;
+import com.codeartist.component.core.support.mq.MqType;
 import com.codeartist.component.mq.core.AbstractMqProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.stream.RecordId;
@@ -13,7 +13,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 /**
  * RedisMQ生产者
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/5/8
  */
 @Slf4j

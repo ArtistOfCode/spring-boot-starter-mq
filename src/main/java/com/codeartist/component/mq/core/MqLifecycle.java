@@ -6,7 +6,7 @@ import org.springframework.beans.factory.InitializingBean;
 /**
  * MQ生命周期
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/5/18
  */
 public interface MqLifecycle extends InitializingBean, DisposableBean {

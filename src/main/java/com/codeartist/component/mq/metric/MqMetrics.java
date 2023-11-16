@@ -1,13 +1,13 @@
 package com.codeartist.component.mq.metric;
 
 import com.codeartist.component.core.support.metric.Metrics;
-import com.codeartist.component.core.support.mq.bean.MqContext;
-import com.codeartist.component.core.support.mq.bean.MqMessage;
+import com.codeartist.component.core.support.mq.MqContext;
+import com.codeartist.component.core.support.mq.MqMessage;
 
 /**
  * MQ监控
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/7/23
  */
 public class MqMetrics {

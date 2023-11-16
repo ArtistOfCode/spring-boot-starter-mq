@@ -1,9 +1,9 @@
 package com.codeartist.component.mq.support;
 
 import com.codeartist.component.core.support.mq.annotatioin.MqConsumerListener;
-import com.codeartist.component.core.support.mq.bean.MqContext;
-import com.codeartist.component.core.support.mq.bean.MqType;
-import com.codeartist.component.core.util.SpringContext;
+import com.codeartist.component.core.support.mq.MqContext;
+import com.codeartist.component.core.support.mq.MqType;
+import com.codeartist.component.core.SpringContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.EventListenerFactory;
 import org.springframework.core.Ordered;
@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * MQ事件监听工厂
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/7/20
  */
 public class MqEventListenerFactory implements EventListenerFactory, Ordered {

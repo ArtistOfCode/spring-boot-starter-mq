@@ -1,8 +1,8 @@
 package com.codeartist.component.mq.core;
 
-import com.codeartist.component.core.support.mq.bean.MqContext;
-import com.codeartist.component.core.support.mq.bean.MqType;
-import com.codeartist.component.core.util.SpringContext;
+import com.codeartist.component.core.support.mq.MqContext;
+import com.codeartist.component.core.support.mq.MqType;
+import com.codeartist.component.core.SpringContext;
 import com.codeartist.component.mq.bean.MqProperties;
 import com.codeartist.component.mq.exception.MqException;
 import com.codeartist.component.mq.metric.MqMetrics;
@@ -16,7 +16,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 /**
  * MQ消费者抽象
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/5/19
  */
 @Slf4j

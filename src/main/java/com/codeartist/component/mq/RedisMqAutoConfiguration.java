@@ -12,7 +12,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 /**
  * RedisMQ自动配置
  *
- * @author J.N.AI
+ * @author AiJiangnan
  * @date 2023/5/15
  */
 @SpringBootConfiguration

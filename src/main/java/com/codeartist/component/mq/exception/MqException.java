@@ -1,6 +1,6 @@
 package com.codeartist.component.mq.exception;
 
-import com.codeartist.component.core.support.mq.bean.MqContext;
+import com.codeartist.component.core.support.mq.MqContext;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * MQ异常
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/7/23
  */
 @Getter

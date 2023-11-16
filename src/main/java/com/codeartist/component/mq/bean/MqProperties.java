@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * RedisMQ配置
  *
- * @author 艾江南
+ * @author AiJiangnan
  * @date 2021/5/9
  */
 @Getter

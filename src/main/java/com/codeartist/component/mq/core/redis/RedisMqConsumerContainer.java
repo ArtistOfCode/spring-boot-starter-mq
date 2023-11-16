@@ -1,8 +1,8 @@
 package com.codeartist.component.mq.core.redis;
 
-import com.codeartist.component.core.support.mq.bean.MqContext;
-import com.codeartist.component.core.support.mq.bean.MqHeaders;
-import com.codeartist.component.core.support.mq.bean.MqType;
+import com.codeartist.component.core.support.mq.MqContext;
+import com.codeartist.component.core.support.mq.MqHeaders;
+import com.codeartist.component.core.support.mq.MqType;
 import com.codeartist.component.mq.core.AbstractMqConsumer;
 import com.codeartist.component.mq.exception.MqException;
 import io.lettuce.core.cluster.api.async.RedisClusterAsyncCommands;
@@ -29,7 +29,7 @@ import java.util.Objects;
 /**
  * RedisMQ消费者
  *
- * @author J.N.AI
+ * @author AiJiangnan
  * @date 2023/5/12
  */
 @Slf4j
