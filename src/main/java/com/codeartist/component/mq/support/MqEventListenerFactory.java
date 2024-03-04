@@ -3,7 +3,7 @@ package com.codeartist.component.mq.support;
 import com.codeartist.component.core.support.mq.MqContext;
 import com.codeartist.component.core.support.mq.MqType;
 import com.codeartist.component.core.support.mq.annotatioin.MqConsumerListener;
-import com.codeartist.component.core.support.props.GlobalProperties;
+import com.codeartist.component.core.support.props.AppProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.EventListenerFactory;
@@ -27,7 +27,7 @@ public class MqEventListenerFactory implements EventListenerFactory, Ordered {
     private final Map<MqType, Set<MqContext>> listenerMap = new ConcurrentHashMap<>();
 
     @Autowired
-    private GlobalProperties globalProperties;
+    private AppProperties appProperties;
 
     @Override
     public int getOrder() {
@@ -69,6 +69,6 @@ public class MqEventListenerFactory implements EventListenerFactory, Ordered {
     }
 
     private String getGroup() {
-        return globalProperties.getAppName() + "-group";
+        return appProperties.getName() + "-group";
     }
 }

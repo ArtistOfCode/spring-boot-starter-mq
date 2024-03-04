@@ -3,7 +3,7 @@ package com.codeartist.component.mq.core;
 import com.codeartist.component.core.SpringContext;
 import com.codeartist.component.core.support.mq.MqContext;
 import com.codeartist.component.core.support.mq.MqType;
-import com.codeartist.component.core.support.props.GlobalProperties;
+import com.codeartist.component.core.support.props.AppProperties;
 import com.codeartist.component.mq.bean.MqProperties;
 import com.codeartist.component.mq.exception.MqException;
 import com.codeartist.component.mq.metric.MqMetrics;
@@ -33,7 +33,7 @@ public abstract class AbstractMqConsumer implements MqConsumer {
     @Autowired
     private MqEventListenerFactory factory;
     @Autowired
-    private GlobalProperties globalProperties;
+    private AppProperties appProperties;
     @Autowired
     protected MqProperties properties;
     @Autowired
@@ -73,6 +73,6 @@ public abstract class AbstractMqConsumer implements MqConsumer {
     }
 
     protected String getApplicationName() {
-        return globalProperties.getAppName();
+        return appProperties.getName();
     }
 }
